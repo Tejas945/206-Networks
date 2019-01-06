@@ -1,0 +1,56 @@
+sudo nano /Users/user_name/.ssh/known_hosts // On MAC delete all known hosts
+
+
+**FTP commands**
+=======================
+sudo apt-get install proftpd
+sudo service proftpd reload
+ftp 192.168.3.2
+Cd /home
+Get index.html
+============
+
+Search in home folder
+============================================
+**Apache Commands**
+============================
+sudo apt-get install apache2
+sudo service apache2 restart
+systemctl status apache2.service
+
+============================================
+
+sudo ip addr delete 169.254.243.174 dev eth1 
+sudo ip addr add 10.10.2.21/24 dev eth1 
+sudo ip addr add 10.10.3.21/24 dev eth1 
+============================================
+169.254.59.23
+
+sudo nano /etc/apache2/apache.conf
+
+Listen: 10.0.3.21:80
+Listen: 10.0.3.21:8080
+Listen: 10.10.10.11:80
+Listen: 10.10.10.11:8080
+
+Save it
+
+sudo service apache2 restart
+============================================
+sudo nano /etc/network/interfaces
+sudo nano  /etc/dhcpcd.conf 
+sudo nano /etc/resolv.conf
+
+============================================
+
+sudo ifconfig eth1 10.10.10.11 netmask 255.255.255.0
+sudo service networking restart
+ifconfig
+
+sudo route add default gw 10.10.10.11 
+traceroute google.com
+
+============================================
+On Mac
+============================================
+sudo route -n  add -net 10.10.30.0/24 192.168.3.2
