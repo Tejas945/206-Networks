@@ -1,0 +1,31 @@
+Raspberry Pi Headless Bootup using Mac steps.
+==============================================================
+1)	Download latest Raspbian image
+2)	Flash the image using Balena Etcher software
+3)	Create a blank file called ssh paste it to the boot folder of the memory   card.
+4)	Share the Mac internet connection by going to system preferences.
+5)	sudo ssh pi@raspberrypi.local
+6)	press enter
+7)	Enter your mac password
+8)	Enter “pi” as username
+9)	Then enter Pi password “raspberry”
+
+Incase ECDSA Warning arises
+1)	In terminal type
+2)	~/.ssh
+3)	cd ~/.ssh
+4)	ls
+5)	nano known_hosts
+6)	clear the file known_hosts
+
+After logging in 
+Set static IP in /etc/network/network.conf  by removing # 
+Set static ip in dhcpcd.conf 
+eth0
+static ip 192.168.2.2
+
+Set static IP for mac book from System Preferences/Network
+
+
+Incase the password gives permission denied
+sudo ssh -l pi 192.168.2.2
